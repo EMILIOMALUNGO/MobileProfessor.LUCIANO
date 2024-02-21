@@ -5,7 +5,7 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-
+import apiCliente from '../API/apiCliente';
 
 
 export default function Login() {
@@ -23,9 +23,10 @@ export default function Login() {
      }
   
     try{
-      const response = await post('/LoginCliente',{
+      const response = await apiCliente.post('/LoginCliente',{
         email,password
        })
+       console.log(email,password)
        await AsyncStorage.setItem('@id', JSON.stringify(response.data.id))
        await AsyncStorage.setItem('@nome', JSON.stringify(response.data.nome))
        await AsyncStorage.setItem('@token', JSON.stringify(response.data.token))

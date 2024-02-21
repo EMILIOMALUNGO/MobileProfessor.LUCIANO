@@ -1,12 +1,7 @@
-
-
-
-
-
 import axios from 'axios'
 
 const apiCliente = axios.create({
-    baseURL: 'http://10.10.10.34:3333'
+    baseURL: 'http://192.168.146.46:3333'
 })
 
 export default apiCliente

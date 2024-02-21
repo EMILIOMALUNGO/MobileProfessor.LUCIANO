@@ -1,9 +1,10 @@
+
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useEffect,useState } from "react";
-
+import firebase from "../FireBaseConnet"
 import { StyleSheet,TouchableOpacity, Text, View } from 'react-native';
 
 import Login from "../Login";

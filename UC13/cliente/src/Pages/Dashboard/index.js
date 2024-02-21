@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useEffect,useState } from "react";
 import firebase from "../FireBaseConnet";
 import { StyleSheet,TouchableOpacity, Text, View } from 'react-native';
-import { requestForegroundPermissionsAsync,getCurrentPositionAsync,watchPositionAsync,LocationAccuracy} from 'expo-location'
+import {requestForegroundPermissionsAsync,getCurrentPositionAsync} from 'expo-location'
 
 import Login from "../Login";
 
@@ -29,7 +29,7 @@ export default function Dashboard(){
     requisitarLocal()
   }, [])
   
-  const motoqueiro= 16
+  const motoqueiro= 17
     useEffect(() => {
       async function handleAsyncNome() {
           const iNome = await AsyncStorage.getItem('@nome')
